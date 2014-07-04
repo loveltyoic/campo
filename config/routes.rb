@@ -138,4 +138,6 @@ Rails.application.routes.draw do
   if Rails.env.development?
     get 'qunit', to: 'qunit#index'
   end
+  mount InnerMessage::Engine => "/inner_message"
+
 end

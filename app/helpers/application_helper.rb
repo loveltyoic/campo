@@ -1,4 +1,5 @@
 module ApplicationHelper
+  include InnerMessage::ViewHelper
   def return_to_path(path)
     case path
     when '/', /^\/login/, /^\/signup/

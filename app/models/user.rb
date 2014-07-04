@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
   include Gravtastic
+  include InnerMessage::Messager
+  
   gravtastic secure: true, default: 'wavatar', rating: 'G', size: 48
   mount_uploader :avatar, AvatarUploader
 
